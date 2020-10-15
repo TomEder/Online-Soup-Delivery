@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './App.css';
+
 import Landing from './pages/landing/landing-component';
 import Menu from './pages/menu/menu-component';
 

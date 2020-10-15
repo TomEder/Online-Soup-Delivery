@@ -4,7 +4,7 @@ import Arrow from './down-arrow.png';
 import Wave from './Rectangle-69.png';
 import soupLanding from './Soup-landing.png';
 
-function Landing() {
+const Landing = () => {
     return (
         <LandingContainer>
             <LandingHead>Online Soup Delivery</LandingHead>
