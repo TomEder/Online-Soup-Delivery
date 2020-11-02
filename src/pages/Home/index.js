@@ -1,7 +1,7 @@
 
 import React from "react";
 
-import Soup from "../../components/soup";
+import Soup from "../../components/SoupMenu";
 import SoupLanding from '../../images/Soup-landing.png'
 import wave from '../../images/Rectangle-69.png'
 
@@ -14,7 +14,7 @@ const Home = () => {
             <img src={SoupLanding} alt="" />
             <img src={wave} alt="" />
 
-            <h3>Kött och kyckling</h3>
+            <h3>Meny</h3>
 
             <div>
                 {soups.map((soup, i) => (

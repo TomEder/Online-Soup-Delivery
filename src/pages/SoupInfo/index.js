@@ -36,6 +36,7 @@ const SoupInfo = ({ store }) => {
                     >
                         Lägg till i korgen
           </button>
+
                 </div>
             ) : (
                     <h2>Välj en rimlig soppa din jävel</h2>

@@ -55,8 +55,8 @@ export const soups = [
     },
     {
         id: 1001,
-        name: "köttsoppa",
-        type: "kött",
+        name: "Köttsoppa",
+        type: "Kött",
         image: kött,
         price: 62,
         ingredients: ["Rotfrukter", "Vitkål"],
@@ -191,7 +191,7 @@ export const soups = [
     {
         id: 1004,
         name: "Rostad majssoppa",
-        type: "vegetarisk",
+        type: "Vegetarisk",
         image: majssoppa,
         price: 62,
         ingredients: ["Quesadillas"],

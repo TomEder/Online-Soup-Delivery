@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 
 
 
-const Soup = ({ soup }) => {
+
+const SoupMenu = ({ soup }) => {
     const { name, price, ingredients, image } = soup;
+
     return (
         <div
             style={{ border: "1px solid grey", maxWidth: "375px", padding: "1rem" }}
@@ -19,10 +21,8 @@ const Soup = ({ soup }) => {
                     Info
                     </Link>
             </div>
-            <div>
-            </div>
         </div>
     );
 };
 
-export default Soup;
+export default SoupMenu;
