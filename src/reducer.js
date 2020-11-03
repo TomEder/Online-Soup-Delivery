@@ -1,6 +1,16 @@
 export const initial_state = {
     itemsInCart: 0,
-    cart: []
+    cart: [],
+    user: {
+        firstName: "",
+        lastName: "",
+        address: "",
+        zipCode: "",
+        city: "",
+        phone: "",
+        email: "",
+        instructions: "",
+    }
 };
 
 export const reducer = (state, action) => {
@@ -8,7 +18,7 @@ export const reducer = (state, action) => {
         return Date.now();
     };
     switch (action.type) {
-        case "add": {
+        case "addToCart": {
             return {
                 itemsInCart: state.itemsInCart + 1,
                 cart: [
@@ -20,7 +30,7 @@ export const reducer = (state, action) => {
                 ]
             };
         }
-        case "remove": {
+        case "removeFromCart": {
             const prevState = [...state.cart];
             const nextState = prevState.filter(
                 (item) => item.itemID !== action.payload
@@ -30,6 +40,15 @@ export const reducer = (state, action) => {
                 itemsInCart: state.itemsInCart - 1,
                 cart: [...nextState]
             };
+        }
+        case "updateUserData": {
+            return {
+                ...state,
+                user: {
+                    ...state.user,
+                    ...action.payload,
+                }
+            }
         }
         case "clear": {
             return {

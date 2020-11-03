@@ -1,8 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AddressForm = () => {
 
+const initialFormData = Object.freeze({
+    firstName: "",
+    lastName: "",
+    address: "",
+    zipCode: "",
+    city: "",
+    phone: "",
+    email: "",
+    instructions: "",
+});
+
+const AddressForm = ({ store }) => {
+    const { state, dispatch } = React.useContext(store);
+    const [inputs, setInputs] = React.useState(initialFormData);
+
+    const handleChange = (e) => {
+        setInputs({
+            ...inputs,
+
+            [e.target.name]: e.target.value.trim()
+        })
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        dispatch({ type: "updateUserData", payload: inputs })
+    };
 
     return (
         <div>
@@ -11,17 +37,19 @@ const AddressForm = () => {
             </Link>
             <h1>Var ska soppan?</h1>
             <form action="">
-                <input type="text" placeholder='Förnamn' />
-                <input type="text" placeholder='Efternamn' />
-                <input type="text" placeholder='Gatuadress' />
-                <input type="text" placeholder='Postnummer' />
-                <input type="text" placeholder='Ort' />
-                <input type="text" placeholder='Telefonnummer' />
-                <input type="text" placeholder='E-post' />
-                <input type="text" placeholder='Våning/Portkod/instruktioner' />
-                <button type="submit"><Link to={'/payment'}>
-                    Vidare
-                    </Link></button>
+                <input name="firstName" value={inputs.name} onChange={handleChange} />
+                <input name="lastName" value={inputs.lastName} onChange={handleChange} />
+                <input name="address" value={inputs.address} onChange={handleChange} />
+                <input name="zipCode" value={inputs.zipCode} onChange={handleChange} />
+                <input name="city" value={inputs.city} onChange={handleChange} />
+                <input name="phone" value={inputs.phone} onChange={handleChange} />
+                <input name="email" value={inputs.email} onChange={handleChange} />
+                <input name="instructions" value={inputs.instructions} onChange={handleChange} />
+                <button onClick={handleSubmit}>
+                    <Link to={'/payment'}>
+                        Vidare
+                    </Link>
+                </button>
             </form>
 
         </div>

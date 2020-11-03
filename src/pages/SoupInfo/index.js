@@ -31,7 +31,7 @@ const SoupInfo = ({ store }) => {
                         ))}
                     </ul>
                     <button
-                        onClick={() => dispatch({ type: "add", payload: soup })}
+                        onClick={() => dispatch({ type: "addToCart", payload: soup })}
                         name="addToCart"
                     >
                         Lägg till i korgen

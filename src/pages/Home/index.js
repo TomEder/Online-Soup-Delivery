@@ -1,5 +1,6 @@
 
 import React from "react";
+import { HomeContainer } from './home.styles';
 
 import Soup from "../../components/SoupMenu";
 import SoupLanding from '../../images/Soup-landing.png'
@@ -9,8 +10,8 @@ import { soups } from "../../SoupData";
 
 const Home = () => {
     return (
-        <div>
-            <h1>Online Soup Delivery</h1>
+        <HomeContainer>
+            <h1>Online Soup <br /> Delivery</h1>
             <img src={SoupLanding} alt="" />
             <img src={wave} alt="" />
 
@@ -21,7 +22,7 @@ const Home = () => {
                     <Soup key={soup.id + i} soup={soup} />
                 ))}
             </div>
-        </div >
+        </HomeContainer >
     );
 };
 

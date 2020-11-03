@@ -6,7 +6,7 @@ const CartItem = ({ item }) => {
     const { dispatch } = React.useContext(Store);
 
     const handleRemove = () => {
-        dispatch({ type: "remove", payload: item.itemID });
+        dispatch({ type: "removeFromCart", payload: item.itemID });
     };
 
     return (

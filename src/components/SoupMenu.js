@@ -9,7 +9,7 @@ const SoupMenu = ({ soup }) => {
 
     return (
         <div
-            style={{ border: "1px solid grey", maxWidth: "375px", padding: "1rem" }}
+
         >
             <img src={image} alt="" />
             <h2>{name}</h2>
