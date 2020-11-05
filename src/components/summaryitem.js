@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Store } from "../App";
 
-const CartSoup = styled.li`
+const SummarySoup = styled.li`
 margin-top: 16px;
 background-color: white;
 font-size: 20px;
@@ -12,7 +12,7 @@ height: 50px;
 position: relative;
 `
 
-const CartItem = ({ item }) => {
+const SummaryItem = ({ item }) => {
     const { dispatch } = React.useContext(Store);
 
     const handleRemove = () => {
@@ -20,11 +20,11 @@ const CartItem = ({ item }) => {
     };
 
     return (
-        <CartSoup>
+        <SummarySoup>
             <p>{item.name}, {item.price}:-</p>
-            <button onClick={() => handleRemove()}>Ta bort</button>
-        </CartSoup>
+
+        </SummarySoup>
     );
 };
 
-export default CartItem;
+export default SummaryItem;

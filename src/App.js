@@ -6,7 +6,7 @@ import "./index.css";
 import routes from "./routes";
 import { initial_state, reducer } from "./reducer";
 
-import Navbar from "./components/navbar";
+
 
 export const Store = React.createContext();
 
@@ -16,7 +16,7 @@ export default function App() {
   return (
     <Store.Provider value={{ state, dispatch }}>
       <Router>
-        <Navbar />
+
         <Switch>
           {routes.map(({ component: Component, ...routeProps }, i) => (
             <Route

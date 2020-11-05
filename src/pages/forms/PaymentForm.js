@@ -1,28 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { PaymentContainer, PaymentHead, PaymentInput, PayContinue, PayBack } from './Payment.styles';
 
 const PaymentForm = () => {
 
 
     return (
-        <div>
-            <Link to="/">
-                <h4>{"<"} Back</h4>
-            </Link>
-            <h1>Fyll i kortuppgifter</h1>
+        <PaymentContainer>
+            <PayBack> <Link to="/" style={{ paddingLeft: 13, textDecoration: 'none', color: 'white' }}>
+                Back
+            </Link></PayBack>
+            <PaymentHead>Fyll i kortuppgifter</PaymentHead>
             <form action="">
-                <input type="text" placeholder='0000 0000 0000 0000 0000' />
-                <input type="text" placeholder='Förnamn' />
-                <input type="text" placeholder='Efternamn' />
-                <input type="text" placeholder='MM/ÅÅ' />
-                <input type="text" placeholder='CVC' />
+                <PaymentInput type="text" placeholder='0000 0000 0000 0000 0000' />
+                <PaymentInput type="text" placeholder='Förnamn' />
+                <PaymentInput type="text" placeholder='Efternamn' />
+                <PaymentInput type="text" placeholder='MM/ÅÅ' />
+                <PaymentInput type="text" placeholder='CVC' />
 
-                <button type="submit"><Link to={'/confirmation'}>
+                <PayContinue type="submit"><Link to={'/confirmation'} style={{ paddingLeft: 13, textDecoration: 'none', color: 'white' }}>
                     Vidare
-                    </Link></button>
+                    </Link></PayContinue>
             </form>
 
-        </div>
+        </PaymentContainer>
     );
 };
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { AddressInput, AddressContainer, AddContinue, AddBack, AddressHead } from './addressform.styles';
 
-
-const initialFormData = Object.freeze({
+const initialFormData = ({
     firstName: "",
     lastName: "",
     address: "",
@@ -31,28 +31,29 @@ const AddressForm = ({ store }) => {
     };
 
     return (
-        <div>
-            <Link to="/">
-                <h4>{"<"} Back</h4>
+        <AddressContainer>
+            <AddBack><Link to="/" style={{ paddingLeft: 13, textDecoration: 'none', color: 'white' }}>
+                Tillbaka
             </Link>
-            <h1>Var ska soppan?</h1>
+            </AddBack>
+            <AddressHead>Var ska soppan?</AddressHead>
             <form action="">
-                <input name="firstName" value={inputs.name} onChange={handleChange} />
-                <input name="lastName" value={inputs.lastName} onChange={handleChange} />
-                <input name="address" value={inputs.address} onChange={handleChange} />
-                <input name="zipCode" value={inputs.zipCode} onChange={handleChange} />
-                <input name="city" value={inputs.city} onChange={handleChange} />
-                <input name="phone" value={inputs.phone} onChange={handleChange} />
-                <input name="email" value={inputs.email} onChange={handleChange} />
-                <input name="instructions" value={inputs.instructions} onChange={handleChange} />
-                <button onClick={handleSubmit}>
-                    <Link to={'/payment'}>
+                <AddressInput name="firstName" value={inputs.name} onChange={handleChange} placeholder="Förnamn" />
+                <AddressInput name="lastName" value={inputs.lastName} onChange={handleChange} placeholder="Efternamn" />
+                <AddressInput name="address" value={inputs.address} onChange={handleChange} placeholder="Gatuadress" />
+                <AddressInput name="zipCode" value={inputs.zipCode} onChange={handleChange} placeholder="Postnummer" />
+                <AddressInput name="city" value={inputs.city} onChange={handleChange} placeholder="Ort" />
+                <AddressInput name="phone" value={inputs.phone} onChange={handleChange} placeholder="Telefonnummer" />
+                <AddressInput name="email" value={inputs.email} onChange={handleChange} placeholder="E-post" />
+                <AddressInput name="instructions" value={inputs.instructions} onChange={handleChange} placeholder="Våning/Portkod/instruktioner" />
+                <AddContinue onClick={handleSubmit}>
+                    <Link to={'/payment'} style={{ paddingLeft: 13, textDecoration: 'none', color: 'white' }}>
                         Vidare
                     </Link>
-                </button>
+                </AddContinue>
             </form>
 
-        </div>
+        </AddressContainer>
     );
 }
 

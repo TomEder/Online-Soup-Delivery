@@ -6,6 +6,15 @@ import morot from './images/morot.png'
 import ramen from './images/ramen.png'
 import skaldjurssoppa from './images/skaldjurssoppa.png'
 import toscana from './images/toscana.png'
+import rameninfo from './images/ramenInfo.png'
+import köttinfo from './images/köttinfo.png'
+import toscanainfo from './images/toscanainfo.png'
+import gulaschinfo from './images/gulaschinfo.png'
+import majsinfo from './images/majsinfo.png'
+import morotsinfo from './images/morotsinfo.png'
+import skalinfo from './images/skalinfo.png'
+import laxinfo from './images/laxinfo.png'
+
 
 export const soups = [
     {
@@ -13,8 +22,9 @@ export const soups = [
         name: "Ramen",
         type: "Kyckling",
         image: ramen,
+        infoimage: rameninfo,
         price: 62,
-        ingredients: ["Kyckling", "Ägg", "Majs", "Paprika"],
+        ingredients: ["Kyckling, ", "Ägg, ", "Majs, ", "Paprika"],
         nutrients: [
             {
                 name: "protein",
@@ -58,8 +68,9 @@ export const soups = [
         name: "Köttsoppa",
         type: "Kött",
         image: kött,
+        infoimage: köttinfo,
         price: 62,
-        ingredients: ["Rotfrukter", "Vitkål"],
+        ingredients: ["Rotfrukter, ", "Vitkål"],
         nutrients: [
             {
                 name: "protein",
@@ -103,8 +114,9 @@ export const soups = [
         name: "Toscana",
         type: "Vegetarisk",
         image: toscana,
+        infoimage: toscanainfo,
         price: 62,
-        ingredients: ["Potatis", "Morötter", "Tomat", "Paprika", "Vita bönor"],
+        ingredients: ["Potatis, ", "Morötter, ", "Tomat, ", "Paprika, ", "Vita bönor"],
         nutrients: [
             {
                 name: "protein",
@@ -148,8 +160,9 @@ export const soups = [
         name: "Vegetarisk Gulasch",
         type: "Vegetarisk",
         image: gulasch,
+        infoimage: gulaschinfo,
         price: 62,
-        ingredients: ["Bönor", "Potatis", "Paprika", "Lök"],
+        ingredients: ["Bönor, ", "Potatis, ", "Paprika, ", "Lök"],
         nutrients: [
             {
                 name: "protein",
@@ -193,6 +206,7 @@ export const soups = [
         name: "Rostad majssoppa",
         type: "Vegetarisk",
         image: majssoppa,
+        infoimage: majsinfo,
         price: 62,
         ingredients: ["Quesadillas"],
         nutrients: [
@@ -238,6 +252,7 @@ export const soups = [
         name: "Morotssoppa",
         type: "Vegetarisk",
         image: morot,
+        infoimage: morotsinfo,
         price: 62,
         ingredients: ["Avocado"],
         nutrients: [
@@ -283,8 +298,9 @@ export const soups = [
         name: "Skaldjurssoppa",
         type: "Fisk och skaldjur",
         image: skaldjurssoppa,
+        infoimage: skalinfo,
         price: 62,
-        ingredients: ["Blåmusslor", "Havskräftor", "Rökor", "Lök"],
+        ingredients: ["Blåmusslor, ", "Havskräftor, ", "Räkor, ", "Lök"],
         nutrients: [
             {
                 name: "protein",
@@ -328,8 +344,9 @@ export const soups = [
         name: "Laxsoppa",
         type: "Fisk och skaldjur",
         image: laxSoppa,
+        infoimage: laxinfo,
         price: 75,
-        ingredients: ["Morot", "Dill", "Ärtor"],
+        ingredients: ["Morot, ", "Dill, ", "Ärtor"],
         nutrients: [
             {
                 name: "protein",

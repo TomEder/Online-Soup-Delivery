@@ -1,21 +1,23 @@
 
 import React from "react";
-import { HomeContainer } from './home.styles';
+import { HomeContainer, Logo, Wave, MenuHead, HeaderText } from './home.styles';
 
 import Soup from "../../components/SoupMenu";
 import SoupLanding from '../../images/Soup-landing.png'
 import wave from '../../images/Rectangle-69.png'
-
+import Navbar from '../../components/navbar';
 import { soups } from "../../SoupData";
 
 const Home = () => {
     return (
         <HomeContainer>
             <h1>Online Soup <br /> Delivery</h1>
-            <img src={SoupLanding} alt="" />
-            <img src={wave} alt="" />
-
-            <h3>Meny</h3>
+            <Logo src={SoupLanding} alt="" />
+            <Wave src={wave} alt="" />
+            <Navbar style={{ position: "fixed" }} />
+            <MenuHead>
+                <HeaderText>Meny</HeaderText>
+            </MenuHead>
 
             <div>
                 {soups.map((soup, i) => (

@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
+import { InfoImage, InfoContainer, InfoText, InfoName, InfoType, InfoList, AddButton, InfoBack } from './soupinfo.styles';
+import Navbar from "../../components/navbar";
 
 import { soups } from "../../SoupData";
 
@@ -10,38 +12,43 @@ const SoupInfo = ({ store }) => {
     const { dispatch } = React.useContext(store);
 
     return (
-        <div>
-            <Link to="/">
-                <h4>{"<"} Back</h4>
-            </Link>
-            {soup ? (
-                <div>
-                    <h1>{soup && soup.name}</h1>
-                    <h3>{soup && soup.type}</h3>
-                    <ul>
-                        {soup.ingredients.map((ing, i) => (
-                            <li key={ing + i}>{ing}</li>
-                        ))}
-                    </ul>
-                    <ul>
-                        {soup.nutrients.map((nut) => (
-                            <li key={nut.name} style={{ textTransform: "capitalize" }}>
-                                {nut.name}: <strong>{nut.value}</strong> {nut.unit}
-                            </li>
-                        ))}
-                    </ul>
-                    <button
-                        onClick={() => dispatch({ type: "addToCart", payload: soup })}
-                        name="addToCart"
-                    >
-                        Lägg till i korgen
-          </button>
+        <InfoContainer>
+            <InfoImage src={soup.infoimage} alt="" />
+            <InfoText>
+                <InfoBack><Link to="/" style={{ paddingLeft: 13, textDecoration: 'none', color: 'white' }}>
+                    Back
+                </Link>
+                </InfoBack>
+                {soup ? (
+                    <div>
+                        <InfoName>{soup && soup.name}</InfoName>
+                        <InfoType>{soup && soup.type}</InfoType>
+                        <InfoList>
+                            {soup.ingredients.map((ing, i) => (
+                                <li key={ing + i}>{ing}</li>
+                            ))}
+                        </InfoList>
+                        <InfoList>
+                            {soup.nutrients.map((nut) => (
+                                <li key={nut.name} style={{ textTransform: "capitalize" }}>
+                                    {nut.name}: <strong>{nut.value}</strong> {nut.unit}
+                                </li>
+                            ))}
+                        </InfoList>
+                        <Navbar style={{ position: "fixed", width: "30px", Zindex: "3", left: "345px", bottom: "100px" }} />
+                        <AddButton
+                            onClick={() => dispatch({ type: "addToCart", payload: soup })}
+                            name="addToCart"
+                        >
+                            Lägg till i korgen
+          </AddButton>
 
-                </div>
-            ) : (
-                    <h2>Välj en rimlig soppa din jävel</h2>
-                )}
-        </div>
+                    </div>
+                ) : (
+                        <h2>Välj en rimlig soppa din jävel</h2>
+                    )}
+            </InfoText>
+        </InfoContainer>
     );
 };
 
