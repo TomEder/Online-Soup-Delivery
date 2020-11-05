@@ -8,7 +8,7 @@ const PaymentForm = () => {
     return (
         <PaymentContainer>
             <PayBack> <Link to="/" style={{ paddingLeft: 13, textDecoration: 'none', color: 'white' }}>
-                Back
+                Meny
             </Link></PayBack>
             <PaymentHead>Fyll i kortuppgifter</PaymentHead>
             <form action="">

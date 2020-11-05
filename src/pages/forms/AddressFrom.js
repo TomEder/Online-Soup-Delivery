@@ -33,7 +33,7 @@ const AddressForm = ({ store }) => {
     return (
         <AddressContainer>
             <AddBack><Link to="/" style={{ paddingLeft: 13, textDecoration: 'none', color: 'white' }}>
-                Tillbaka
+                Meny
             </Link>
             </AddBack>
             <AddressHead>Var ska soppan?</AddressHead>

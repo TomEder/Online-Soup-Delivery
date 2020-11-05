@@ -17,13 +17,15 @@ const CartButton = () => {
                 justifyContent: "center",
                 cursor: "pointer",
                 alignItems: "center",
-                background: "black",
+                fontSize: "20px",
+                background: "green",
+                opacity: "70%",
                 color: "white",
-                width: "2rem",
+                width: "10rem",
                 height: "2rem"
             }}
         >
-            <h5>{itemsInCart}</h5>
+            <h5>Gå till varukorgen, {itemsInCart}</h5>
         </Link>
     );
 };

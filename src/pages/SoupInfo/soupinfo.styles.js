@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
 export const InfoContainer = styled.div`
-height: 812px;
-width: 375px;
 margin: 0;
-bottom: 100px;
-background-color: rgba(0, 0, 0, 0.5)
+height: 812px;
+background-color: #FEFBF7;
 `
 
 export const InfoImage = styled.img`
@@ -46,21 +44,22 @@ list-style-type: none;
 `
 export const AddButton = styled.h3`
 position: fixed;
-width: 183px;
+width: 250px;
 margin: 0;
-font-size: 17px;
+font-size: 30px;
 height: 40px;
 border: 2px solid beige;
-background-color: #E57A44;
+background-color: #BCE96B;
 opacity: 70%;
-left: 191px;
+left: 120px;
 bottom: 0px;
 cursor: pointer;
+text-align: center;
 `
 
 export const InfoBack = styled.h3`
 position: fixed;
-width: 183px;
+width: 110px;
 font-size: 25px;
 height: 40px;
 border: 2px solid beige;
@@ -70,4 +69,5 @@ opacity: 70%;
 margin: 0;
 bottom: 0px;
 cursor: pointer;
+text-align: center;
 `

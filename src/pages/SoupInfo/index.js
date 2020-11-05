@@ -16,7 +16,7 @@ const SoupInfo = ({ store }) => {
             <InfoImage src={soup.infoimage} alt="" />
             <InfoText>
                 <InfoBack><Link to="/" style={{ paddingLeft: 13, textDecoration: 'none', color: 'white' }}>
-                    Back
+                    Meny
                 </Link>
                 </InfoBack>
                 {soup ? (
@@ -45,7 +45,7 @@ const SoupInfo = ({ store }) => {
 
                     </div>
                 ) : (
-                        <h2>Välj en rimlig soppa din jävel</h2>
+                        <h2>Den soppan finns inte!</h2>
                     )}
             </InfoText>
         </InfoContainer>

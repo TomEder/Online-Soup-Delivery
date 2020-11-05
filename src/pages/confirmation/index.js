@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SummaryItem from "../../components/summaryitem";
-import { ConContainer, ConHead, ConSub, ConText, ConTo, ConAddress, ConOrdered, ConSoups, ConBack } from './confirm.styles'
+import { ConContainer, ConHead, ConSub, ConText, ConTo, ConAddress, ConOrdered, ConSoups, ConBack, CuponImg } from './confirm.styles'
+import cupon from '../../images/Cupon.png'
 
 
 
-const getCompleteAddress = (user) => `${user.address} ${user.zipCode} ${user.city}`
+const getCompleteAddress = (user) => `${user.firstName}  ${user.lastName}, ${user.address} ${user.zipCode} ${user.city}`
 
 const Confirmation = ({ store }) => {
     const { state } = React.useContext(store);
@@ -13,7 +14,7 @@ const Confirmation = ({ store }) => {
     return (
         <ConContainer>
             <ConBack><Link to="/" style={{ paddingLeft: 13, textDecoration: 'none', color: 'white' }}>
-                Tillbaka
+                Meny
             </Link>
             </ConBack>
             <ConHead>Tack för din beställning!</ConHead>
@@ -31,6 +32,8 @@ const Confirmation = ({ store }) => {
                     <SummaryItem key={item.name + i} item={item} />
                 ))}
             </ConSoups>
+
+            <CuponImg src={cupon} alt="" />
 
 
         </ConContainer>

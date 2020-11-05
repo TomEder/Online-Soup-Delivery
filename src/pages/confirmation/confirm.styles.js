@@ -39,7 +39,7 @@ font-size: 20px;
 padding: 15px;
 text-align: center;
 `
-export const ConOrdered = styled.div`
+export const ConOrdered = styled.h2`
 position: relative;
 font-size: 20px;
 padding: 15px;
@@ -55,13 +55,20 @@ text-align: center;
 `
 export const ConBack = styled.h3`
 position: fixed;
-width: 183px;
-font-size: 30px;
+width: 110px;
+font-size: 25px;
 height: 40px;
 border: 2px solid beige;
 background-color: #E57A44;
+text-decoration: none;
 opacity: 70%;
 margin: 0;
 bottom: 0px;
 cursor: pointer;
+z-index: 2;
+text-align: center;
+`
+
+export const CuponImg = styled.img`
+padding: 25px;
 `

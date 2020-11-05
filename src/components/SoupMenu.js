@@ -10,6 +10,7 @@ position: relative;
 height: 375px;
 margin-top: 5px;
 display: flex;
+background-color: #FEFBF7;
 `
 const SoupImage = styled.img`
 width: 375px;
@@ -19,7 +20,7 @@ z-index: 1;
 
 const TitleContainer = styled.div`
 
-background-color: rgba(0, 0, 0, 0.5);
+background-color: rgba(0, 0, 0, 0.6);
 position: absolute;
 flex-direction: row;
 width: 375px;
@@ -35,37 +36,41 @@ bottom: 391px;
 color: white;
 `
 const SoupPrice = styled.h4`
-margin: 0;
+margin-right: 0;
+padding: 5px;
 position: relative;
 z-index: 2;
 bottom: 24px;
+width: 20px;
 left: 331px;
 color: white;
 `
 const Ingredients = styled.p`
 position: relative;
-bottom: 5px;
+bottom: 15px;
 color: white;
 `
 const SoupLink = styled.h3`
 margin: 0;
 font-size: 20px;
 text-decoration: none;
-background-color: rgba(0, 0, 0, 0.5);
+background-color: rgba(0, 0, 0, 0.6);
 position: Absolute;
 top: 334px;
 flex-direction: row;
-width: 25%;
+width: 15%;
 height: 40px;
 z-index: 2; 
 color: white;
 cursor: pointer;
 justify-content: center;
+text-align: center;
 `
 
 
-const SoupMenu = ({ soup }) => {
+const SoupMenu = ({ soup }, { store }) => {
     const { name, price, ingredients, image } = soup;
+
 
     return (
         <SoupContainer>
@@ -79,9 +84,10 @@ const SoupMenu = ({ soup }) => {
 
 
             <SoupLink> <Link to={`/soups/${soup.id}`} style={{ paddingLeft: 13, textDecoration: 'none', color: 'white' }}>
-                Info
+                Välj
                     </Link>
             </SoupLink>
+
 
 
         </SoupContainer>

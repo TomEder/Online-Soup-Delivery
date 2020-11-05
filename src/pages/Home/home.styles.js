@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const HomeContainer = styled.div`
-width: 375px;
-display-flex;
-
+margin: 0;
+height: 812px;
+background-color: #FEFBF7;
 `
 
 export const Logo = styled.img`
@@ -35,3 +35,22 @@ top: 5px;
 font-size: 30px;
 `
 
+export const LandingHead = styled.h1`
+position: relative;
+font-size: 40px;
+padding: 15px;
+text-align: center;
+`
+
+export const ToSoup = styled.p`
+bottom: 300px;
+position: relative;
+text-align: center;
+`
+export const ArrowImg = styled.img`
+position: relative;
+bottom: 270px;
+left: 162px;
+
+
+`

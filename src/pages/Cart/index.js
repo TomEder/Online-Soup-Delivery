@@ -14,7 +14,7 @@ const Cart = ({ store }) => {
         <CartContainer>
             <CartHead>Varukorgen</CartHead>
             <BackLink><Link to="/" style={{ paddingLeft: 13, textDecoration: 'none', color: 'white' }} >
-                Backa
+                Meny
             </Link>
             </BackLink>
             <CartList>
